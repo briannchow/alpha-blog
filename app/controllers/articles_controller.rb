@@ -7,8 +7,19 @@ class ArticlesController < ApplicationController
   def create
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
-    @article.save
-    redirect_to articles_show(@article)  #you however need to define the show method first or this will not work
+    #@article.save
+    if @article.save
+      flash[:notice] = "Article was created succesfully"
+      redirect_to article_path(@article)
+    else
+      render "new"
+    end
+    #redirect_to articles_path(@article)  #you however need to define the show method first or this will not work
+  end
+  
+  def show
+    @article = Article.find(params[:id])
+    
   end
   
   private
