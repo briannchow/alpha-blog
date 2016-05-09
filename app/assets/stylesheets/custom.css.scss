@@ -22,7 +22,7 @@ $navbar-default-bg: #ffffb3;
 }
 
 #Sign-Up:hover {
-  background: #ffff66;
+  background: #ffffb3;
 }
 .center {
   text-align: center;
@@ -43,6 +43,32 @@ $navbar-default-bg: #ffffb3;
 footer {
   text-align: center;
   border-top: 1px solid #00cc44;
+  margin-top: 175px;
 }
+
+.btn {
+  background: #00cc44;
+}
+
+.bth:hover {
+  background: #ffffb3;
+}
+
+#publish {
+  background: #00cc44;
+}
+
+#publish:hover {
+  background: #ffffb3;
+}
+
+#return {
+  background: #00cc44;
+}
+
+#return:hover {
+  background: #ffffb3;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
