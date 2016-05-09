@@ -1,3 +1,48 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+$navbar-default-bg: #ffffb3;
+#logo {
+  float: left;
+  font: Calibri;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #00cc44;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#logo:hover {
+  background: #009933;
+  color: #f2f2f2;
+}
+
+#Sign-Up {
+  background:#00cc44;
+  font-family: Calibri;
+  font-weight: bold;
+}
+
+#Sign-Up:hover {
+  background: #ffff66;
+}
+.center {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.jumbotron {
+  background-image: asset-url("rDQ6BEA.jpg");
+  background-size: cover;
+  height: 600px;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  font-family: Calibri;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #00cc44;
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";
