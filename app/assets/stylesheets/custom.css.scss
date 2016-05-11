@@ -70,5 +70,42 @@ footer {
   background: #ffffb3;
 }
 
+#panel_body {
+  height: 100px;
+  color: #ff8080;
+}
+
+.panel > .panel-heading {
+  background-image: none;
+  background-color: #ff8080;
+
+}
+
+#Index_Show {
+  background: #00cc44;
+}
+
+#Index_Show:hover {
+  background: #ffffb3;
+}
+
+#Edit_Show {
+  background: #00cc44;
+}
+
+#Edit_Show:hover {
+  background: #ffffb3;
+}
+
+.article-actions {
+  border-top: 1px solid #00cc44;
+  margin: 5px;
+}
+
+.description {
+  margin-top: 0px;
+}
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
