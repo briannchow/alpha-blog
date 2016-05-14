@@ -1,21 +1,31 @@
-<h1>This is the index page</h1>
-<p>go here to create a new article, bitch</p>
-<%= link_to "Create a new article from the index", new_article_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Actions available</th>
-  </tr>
-  <% @articles.each do |article| %>
-  <tr>
-    <td><%= article.title %></td>
-    <td><%= article.description %></td>
-    <td><%= link_to "Edit this", edit_article_path(article) %></td>
-    <td><%= link_to "Show this", article_path(article) %></td>
-    <td><%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
-  </tr>
-  <% end %>  
-</table>
+<h1 align = "center">INDEX</h1>
+<p align = "center">go here to create a new article, bitch</p>
+<div class = "col-xs-8 col-xs-offset-2">
+  <%= link_to "Create a new article from the index", new_article_path, class: "btn btn-primary btn-sm" %>
+</div>
+<% @articles.each do |article| %>
+<div class = "row">
+  <div class = "col-xs-8 col-xs-offset-2">
+    <div class = "index well">
+      <div class = "article-title">
+        <%= link_to article.title, article_path(article) %>
+      </div>
+      <div class = "article-body">
+        <%= truncate(article.description, length: 100) %>
+      </div>
+      <div class = "article-actions">
+        <%= link_to "Back to Index", articles_path, class: "btn btn-primary btn-sm" %>
+        <%= link_to "Edit This", edit_article_path(article), class: "btn btn-primary btn-sm" %>
+        <%= link_to "Delete This", article_path(article), method: :delete, data: { confirm: "Are you sure you want to delete this?" }, class: "btn btn-danger btn-sm" %>
+      </div>
 
-<%= link_to "back to home page", root_path %>
+    </div>
+  </div>
+</div>
+<% end %>  
+
+<div class = "row">
+  <div class = "col-xs-8 col-xs-offset-2">
+    <%= link_to "Home", root_path, class: "btn btn-primary btn-sm" %>
+  </div>
+</div>
